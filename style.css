@@ -159,3 +159,62 @@ button:hover {
     background: #88998800;
   color: hsl(0, 0%, 100%);
 }
+
+/* ============ Responsive Styles ============ */
+
+/* تحسينات عامة للموبايل والشاشات الصغيرة */
+@media (max-width: 900px) {
+  body {
+    /* تغيير خلفية الصفحة لتناسب الشاشات الطولية */
+    background-position: top -5vw right -20vw, bottom right;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .header--title {
+    font-size: 2rem;
+  }
+
+  .header--toggle {
+    gap: 1rem;
+  }
+
+  .header--h3 {
+    font-size: 1rem;
+  }
+
+  /* تحويل الكروت من وضع مجاور إلى وضع رأسي */
+  .con-card {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 22rem; /* تحديد حد أقصى للعرض لتبدو بشكل متناسق */
+    height: auto; /* ترك الارتفاع يتحدد تلقائياً حسب المحتوى */
+    padding: 2rem 1.5rem;
+  }
+
+  /* توحيد ارتفاع الكارت المميز مع باقي الكروت في الموبايل */
+  .c {
+    height: auto;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* تحسين إضافي للشاشات الصغيرة جداً */
+@media (max-width: 375px) {
+  .card-price {
+    font-size: 2.5rem;
+  }
+  
+  .header--title {
+    font-size: 1.75rem;
+  }
+}
