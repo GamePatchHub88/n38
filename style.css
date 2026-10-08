@@ -1,0 +1,161 @@
+/* ============ المتغيرات ============ */
+:root {
+  --bg: hsl(210, 60%, 98%);
+  --navy: hsl(224, 21%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --blue: hsl(219, 85%, 26%);
+  --dark-l: hsl(201, 50%, 29%);
+  --gray: hsl(219, 14%, 63%);
+  --gray_dark: hsl(219, 12%, 42%);
+}
+
+/* ============ إعادة الضبط ============ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============ الأساس ============ */
+body {
+  min-height: 100vh;
+  background-color: hsl(240, 78%, 98%);
+  margin: 0;
+  background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    right top,
+    left bottom;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  margin-top: 2rem;
+}
+.header--title {
+  font-size: 3rem;
+  color: hsl(233, 13%, 49%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 650;
+  text-align: center;
+}
+.header--toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.header--h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsla(234, 13%, 49%, 0.663);
+}
+.header--label {
+  background-color: hsl(238, 63%, 64%);
+  border-radius: 20rem;
+  width: 5rem;
+  height: 2.5rem;
+  position: relative;
+}
+.header--label:hover {
+  background-color: hsla(238, 63%, 64%, 0.666);
+}
+.header--label::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  transform: translate(2.7rem, -1rem);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+.header-input--check {
+  display: block;
+  opacity: 0;
+}
+.header:has(.header-input--check:checked) .header--label::after {
+  transform: translate(0.3rem, -1rem);
+}
+.con-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4%;
+}
+
+.card {
+  border-radius: 1rem;
+  width: 20rem;
+  height: 25rem;
+  background-color: rgb(255, 255, 255);
+  padding: 1.4rem;
+  text-align: center;
+}
+.card-features,
+.card--title {
+  color: hsl(233, 13%, 49%);
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card-price {
+  color: hsl(232, 13%, 33%);
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: -1rem;
+}
+
+.c {
+  height: 29rem;
+  padding: 3rem 1.4rem;
+  background: linear-gradient(to right, hsl(237, 73%, 79%), hsl(238, 63%, 64%));
+}
+.card-feature {
+  border-top: solid hsl(233, 13%, 49%) 1px;
+  border-bottom: solid hsl(233, 13%, 49%) 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.c h3 {
+  color: white;
+}
+.c h1 {
+  color: white;
+}
+
+.c .card-feature {
+  border-top: solid hsl(0, 0%, 100%) 1px;
+  border-bottom: solid hsl(0, 0%, 100%) 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+button {
+  width: 100%;
+  height: 3rem;
+  border-radius: 1rem;
+  background: linear-gradient(to right, hsl(237, 73%, 79%), hsl(238, 63%, 64%));
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  background: #88998800;
+  border: 2px solid hsl(238, 63%, 64%);
+  color: hsl(238, 63%, 64%);
+}
+.c button {
+  background: white;
+  border: 2px solid white;
+  color: hsl(238, 63%, 64%);
+}
+.c button:hover{
+    background: #88998800;
+  color: hsl(0, 0%, 100%);
+}
